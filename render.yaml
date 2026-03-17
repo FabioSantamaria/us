@@ -1,8 +1,8 @@
 services:
-  - type: web
+  - type: static
     name: romantic-escape-room
-    env: node
+    env: static
     buildCommand: npm run build
-    startCommand: npm start
-    staticPublishPath: dist
+    publishPath: dist
     nodeVersion: 18
+    rootDirectory: .
