@@ -2,7 +2,7 @@ services:
   - type: static
     name: romantic-escape-room
     env: static
-    buildCommand: npm run build
+    buildCommand: npm install && npm run build
     publishPath: dist
-    nodeVersion: 18
+    nodeVersion: 22
     rootDirectory: .
