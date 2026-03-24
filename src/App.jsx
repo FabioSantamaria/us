@@ -1,15 +1,23 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import ProgressBar from './components/ProgressBar'
-import QuizLevel from './components/QuizLevel'
-import RiddleLevel from './components/RiddleLevel'
+import EmotionalLevel from './components/EmotionalLevel'
+import DirectSearchLevel from './components/DirectSearchLevel'
 import CipherLevel from './components/CipherLevel'
-import MemoryLevel from './components/MemoryLevel'
-import BirdLevel from './components/BirdLevel'
-import PurifierLevel from './components/PurifierLevel'
+import ErrorLevel from './components/ErrorLevel'
+import EnvironmentLevel from './components/EnvironmentLevel'
+import ChoiceLevel from './components/ChoiceLevel'
 import FinalLevel from './components/FinalLevel'
 
-const LEVELS = ['quiz', 'riddle', 'cipher', 'memory', 'bird', 'purifier', 'final']
+const LEVELS = [
+  { id: 'emotional', type: 'digital_to_physical', name: 'Pregunta Emocional' },
+  { id: 'direct', type: 'direct_search', name: 'Búsqueda Directa' },
+  { id: 'cipher', type: 'digital_to_physical', name: 'Puzzle Cifrado' },
+  { id: 'error', type: 'digital_to_physical', name: 'Encuentra el Error' },
+  { id: 'environment', type: 'environment_search', name: 'Código en el Entorno' },
+  { id: 'choice', type: 'digital_to_physical', name: 'Elección Falsa' },
+  { id: 'final', type: 'final', name: 'Gran Final' }
+]
 const PARTNER_NAME = 'Andrea'
 
 function App() {
@@ -47,19 +55,19 @@ function App() {
   }
 
   const getCurrentLevelComponent = () => {
-    switch (LEVELS[currentLevel]) {
-      case 'quiz':
-        return <QuizLevel onComplete={() => completeLevel('quiz')} partnerName={PARTNER_NAME} />
-      case 'riddle':
-        return <RiddleLevel onComplete={() => completeLevel('riddle')} partnerName={PARTNER_NAME} />
+    switch (LEVELS[currentLevel].id) {
+      case 'emotional':
+        return <EmotionalLevel onComplete={() => completeLevel('emotional')} partnerName={PARTNER_NAME} />
+      case 'direct':
+        return <DirectSearchLevel onComplete={() => completeLevel('direct')} partnerName={PARTNER_NAME} />
       case 'cipher':
         return <CipherLevel onComplete={() => completeLevel('cipher')} partnerName={PARTNER_NAME} />
-      case 'memory':
-        return <MemoryLevel onComplete={() => completeLevel('memory')} partnerName={PARTNER_NAME} />
-      case 'bird':
-        return <BirdLevel onComplete={() => completeLevel('bird')} partnerName={PARTNER_NAME} />
-      case 'purifier':
-        return <PurifierLevel onComplete={() => completeLevel('purifier')} partnerName={PARTNER_NAME} />
+      case 'error':
+        return <ErrorLevel onComplete={() => completeLevel('error')} partnerName={PARTNER_NAME} />
+      case 'environment':
+        return <EnvironmentLevel onComplete={() => completeLevel('environment')} partnerName={PARTNER_NAME} />
+      case 'choice':
+        return <ChoiceLevel onComplete={() => completeLevel('choice')} partnerName={PARTNER_NAME} />
       case 'final':
         return <FinalLevel partnerName={PARTNER_NAME} onReset={resetGame} />
       default:
@@ -71,9 +79,13 @@ function App() {
     <div className="app">
       <div className="game-container">
         <header className="game-header">
-          <h1 className="game-title">System Recovery</h1>
+          <h1 className="game-title">Gymkhana Romántica 🔐</h1>
           <ProgressBar current={currentLevel} total={LEVELS.length} />
-          <button className="reset-btn" onClick={resetGame}>Reset Game</button>
+          <div className="level-info">
+            <span className="level-name">{LEVELS[currentLevel]?.name || ''}</span>
+            <span className="level-type">{LEVELS[currentLevel]?.type || ''}</span>
+          </div>
+          <button className="reset-btn" onClick={resetGame}>Reiniciar Aventura</button>
         </header>
         
         <main className={`level-content ${isTransitioning ? 'transitioning' : ''}`}>
