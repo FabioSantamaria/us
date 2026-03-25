@@ -1,14 +1,24 @@
 :root {
-  font-family: 'Courier New', monospace;
+  font-family: 'Georgia', serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #00ff41;
-  background-color: #0a0a0a;
+  color: #d4a574;
+  background-color: #1a1a2e;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
+  /* Paleta romántica */
+  --primary-rose: #e8b4b8;
+  --secondary-rose: #f4c2c2;
+  --accent-gold: #d4a574;
+  --deep-purple: #6b5b95;
+  --soft-pink: #ffb6c1;
+  --bg-dark: #1a1a2e;
+  --bg-medium: #2d2d44;
+  --bg-light: #3d3d5c;
 }
 
 * {
@@ -20,8 +30,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0f1f 100%);
-  color: #00ff41;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 50%, var(--bg-light) 100%);
+  color: var(--primary-rose);
   overflow-x: hidden;
 }
 
@@ -36,30 +46,32 @@ body {
 .game-container {
   width: 100%;
   max-width: 800px;
-  background: rgba(10, 10, 10, 0.9);
-  border: 2px solid #00ff41;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+  background: rgba(26, 26, 46, 0.95);
+  border: 2px solid var(--primary-rose);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(232, 180, 184, 0.3);
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .game-header {
   padding: 30px;
-  background: rgba(0, 255, 65, 0.1);
-  border-bottom: 1px solid #00ff41;
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.1) 0%, rgba(244, 194, 194, 0.1) 100%);
+  border-bottom: 1px solid var(--primary-rose);
   text-align: center;
 }
 
 .game-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-  animation: pulse 2s infinite;
+  color: var(--primary-rose);
+  text-shadow: 0 0 10px rgba(232, 180, 184, 0.5);
+  animation: romantic-pulse 3s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+@keyframes romantic-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
 }
 
 .progress-bar {
@@ -69,41 +81,84 @@ body {
 .progress-info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 0.9em;
-  color: #00ff41;
+  color: var(--accent-gold);
 }
 
 .progress-track {
   width: 100%;
-  height: 8px;
-  background: rgba(0, 255, 65, 0.2);
-  border-radius: 4px;
+  height: 12px;
+  background: rgba(232, 180, 184, 0.2);
+  border-radius: 6px;
   overflow: hidden;
+  position: relative;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #00ff41, #00cc33);
-  transition: width 0.5s ease;
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  background: linear-gradient(90deg, var(--primary-rose), var(--secondary-rose));
+  transition: width 0.8s ease;
+  box-shadow: 0 0 15px rgba(232, 180, 184, 0.5);
+  border-radius: 6px;
+}
+
+.progress-levels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.progress-level {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(232, 180, 184, 0.2);
+  border: 2px solid var(--primary-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: var(--primary-rose);
+  transition: all 0.3s ease;
+}
+
+.progress-level.completed {
+  background: linear-gradient(135deg, var(--primary-rose), var(--secondary-rose));
+  color: var(--bg-dark);
+  border-color: var(--secondary-rose);
+  transform: scale(1.1);
+}
+
+.progress-level.current {
+  background: rgba(244, 194, 194, 0.3);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(212, 165, 116, 0.5);
+  animation: current-pulse 2s infinite;
+}
+
+@keyframes current-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 
 .reset-btn {
-  background: rgba(255, 0, 0, 0.2);
-  border: 1px solid #ff0041;
-  color: #ff0041;
-  padding: 8px 16px;
-  border-radius: 5px;
+  background: rgba(244, 194, 194, 0.2);
+  border: 1px solid var(--secondary-rose);
+  color: var(--secondary-rose);
+  padding: 10px 20px;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 0.9em;
 }
 
 .reset-btn:hover {
-  background: rgba(255, 0, 0, 0.3);
-  box-shadow: 0 0 10px rgba(255, 0, 65, 0.3);
+  background: rgba(244, 194, 194, 0.3);
+  box-shadow: 0 0 15px rgba(244, 194, 194, 0.4);
+  transform: translateY(-2px);
 }
 
 .level-content {
@@ -127,21 +182,27 @@ body {
 .challenge-title {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #00ff41;
-  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  color: var(--primary-rose);
+  text-shadow: 0 0 8px rgba(232, 180, 184, 0.4);
 }
 
 .challenge-description {
   font-size: 1.1em;
   margin-bottom: 10px;
   white-space: pre-line;
-  color: #00cc33;
+  color: var(--accent-gold);
 }
 
 .personal-message {
   font-style: italic;
-  color: #ff00ff;
+  color: var(--deep-purple);
   margin-top: 15px;
+}
+
+/* Formularios de desafíos */
+.answer-form {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .challenge-form {
@@ -156,10 +217,10 @@ body {
 .challenge-input {
   width: 100%;
   padding: 15px;
-  background: rgba(0, 255, 65, 0.1);
-  border: 2px solid #00ff41;
-  border-radius: 8px;
-  color: #00ff41;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  color: var(--primary-rose);
   font-size: 1.1em;
   font-family: inherit;
   text-align: center;
@@ -168,54 +229,60 @@ body {
 
 .challenge-input:focus {
   outline: none;
-  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
-  background: rgba(0, 255, 65, 0.15);
+  box-shadow: 0 0 20px rgba(232, 180, 184, 0.5);
+  background: rgba(232, 180, 184, 0.15);
+  border-color: var(--secondary-rose);
 }
 
 .challenge-input::placeholder {
-  color: rgba(0, 255, 65, 0.5);
+  color: rgba(232, 180, 184, 0.6);
 }
 
 .hint-text {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #ffaa00;
+  color: var(--accent-gold);
   font-style: italic;
 }
 
 .submit-btn {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #00ff41, #00cc33);
+  background: linear-gradient(135deg, var(--primary-rose), var(--secondary-rose));
   border: none;
-  border-radius: 8px;
-  color: #0a0a0a;
+  border-radius: 12px;
+  color: var(--bg-dark);
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
+  box-shadow: 0 4px 15px rgba(232, 180, 184, 0.3);
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(0, 255, 65, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 180, 184, 0.5);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
 }
 
 .error-message {
-  background: rgba(255, 0, 0, 0.2);
-  border: 1px solid #ff0041;
-  color: #ff0041;
-  padding: 10px;
-  border-radius: 5px;
+  background: rgba(244, 194, 194, 0.2);
+  border: 1px solid var(--secondary-rose);
+  color: var(--secondary-rose);
+  padding: 12px;
+  border-radius: 8px;
   margin: 15px 0;
-  animation: shake 0.5s;
+  animation: romantic-shake 0.6s;
 }
 
-@keyframes shake {
+@keyframes romantic-shake {
   0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
 }
 
 .attempts-counter {
@@ -224,26 +291,489 @@ body {
   color: rgba(0, 255, 65, 0.7);
 }
 
-.quiz-level {
+/* Estilos para todos los desafíos */
+.emotional-challenge,
+.riddle-challenge,
+.cipher-challenge,
+.error-detection-challenge,
+.choice-challenge,
+.hidden-message-challenge,
+.interactive-challenge,
+.image-challenge {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.challenge-header h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: var(--primary-rose);
+  text-shadow: 0 0 8px rgba(232, 180, 184, 0.4);
+}
+
+.challenge-header p {
+  font-size: 1.1em;
+  color: var(--accent-gold);
+  margin-bottom: 25px;
+}
+
+/* Estilos específicos para cada desafío */
+.question-container,
+.riddle-container,
+.cipher-container,
+.error-container,
+.choice-container,
+.hidden-message-container,
+.interactive-container,
+.image-container {
+  background: rgba(232, 180, 184, 0.05);
+  border: 1px solid var(--primary-rose);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.question {
+  font-size: 1.3em;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.riddle-text {
+  font-size: 1.2em;
+  color: var(--accent-gold);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-style: italic;
+  padding: 15px;
+  background: rgba(212, 165, 116, 0.05);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 8px;
+}
+
+.options-grid .option-label {
+  display: block;
+  margin: 10px 0;
+}
+
+.option-label input[type="radio"] {
+  margin-right: 10px;
+}
+
+.option-text {
+  color: var(--primary-rose);
+  font-size: 1em;
+}
+
+/* Estilos para Choice Challenge */
+.choice-btn {
+  width: 100%;
+  padding: 20px;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  color: var(--primary-rose);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+  font-family: inherit;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: rgba(232, 180, 184, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(232, 180, 184, 0.3);
+}
+
+.choice-btn.selected {
+  background: rgba(212, 165, 116, 0.2);
+  border-color: var(--accent-gold);
+}
+
+/* Estilos para Cipher Challenge */
+.cipher-info,
+.error-display {
+  margin-bottom: 20px;
+}
+
+.cipher-info h4,
+.error-display h4 {
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.encrypted-message,
+.error-message {
+  font-family: 'Courier New', monospace;
+  background: rgba(26, 26, 46, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  color: var(--primary-rose);
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+/* Estilos para Hidden Message Challenge */
+.hidden-text {
+  font-family: 'Courier New', monospace;
+  margin: 20px 0;
+}
+
+.text-line {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.letter {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+/* Estilos para Interactive Challenge */
+.game-instructions,
+.game-status {
+  margin-bottom: 20px;
+}
+
+.game-instructions h4,
+.game-status h4 {
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--primary-rose);
+}
+
+.timer.warning {
+  color: var(--secondary-rose);
+  animation: timer-pulse 1s infinite;
+}
+
+@keyframes timer-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.grid-button {
+  padding: 20px;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  color: var(--primary-rose);
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.grid-button:hover:not(:disabled) {
+  background: rgba(232, 180, 184, 0.2);
+  transform: scale(1.05);
+}
+
+.grid-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.grid-button.clicked {
+  background: rgba(212, 165, 116, 0.3);
+  border-color: var(--accent-gold);
+}
+
+.grid-button.correct {
+  background: rgba(232, 180, 184, 0.4);
+  border-color: var(--secondary-rose);
+  transform: scale(1.1);
+}
+
+/* Estilos para Image Challenge */
+.image-placeholder {
+  margin: 20px 0;
+}
+
+.image-box {
+  background: rgba(26, 26, 46, 0.8);
+  border: 2px solid var(--primary-rose);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.image-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.image-description {
+  text-align: left;
+  color: var(--accent-gold);
+  margin-top: 20px;
+}
+
+.image-description ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.image-description li {
+  margin: 5px 0;
+}
+
+/* Estilos adicionales para desafíos */
+.message-instruction,
+.correction-task {
+  margin-bottom: 20px;
+}
+
+.message-instruction h4,
+.correction-task h4 {
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.message-instruction p,
+.correction-task p {
+  color: var(--primary-rose);
+  margin-bottom: 10px;
+}
+
+.correction-task .hint {
+  color: var(--accent-gold);
+  font-style: italic;
+}
+
+.progress {
+  color: var(--primary-rose);
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.question-container .hint {
+  color: var(--accent-gold);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.radio-input {
+  margin-right: 10px;
+}
+
+/* Inputs específicos para cada desafío */
+.riddle-input,
+.cipher-input,
+.correction-input,
+.hidden-input,
+.image-input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  color: var(--primary-rose);
+  font-size: 1.1em;
+  font-family: inherit;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin: 15px 0;
+}
+
+.riddle-input:focus,
+.cipher-input:focus,
+.correction-input:focus,
+.hidden-input:focus,
+.image-input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(232, 180, 184, 0.5);
+  background: rgba(232, 180, 184, 0.15);
+  border-color: var(--secondary-rose);
+}
+
+.riddle-input::placeholder,
+.cipher-input::placeholder,
+.correction-input::placeholder,
+.hidden-input::placeholder,
+.image-input::placeholder {
+  color: rgba(232, 180, 184, 0.6);
+}
+
+.submit-challenge-btn,
+.start-game-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--primary-rose), var(--secondary-rose));
+  border: none;
+  border-radius: 12px;
+  color: var(--bg-dark);
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 4px 15px rgba(232, 180, 184, 0.3);
+  margin-top: 15px;
+}
+
+.submit-challenge-btn:hover,
+.start-game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 180, 184, 0.5);
+}
+
+.submit-challenge-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Resultados y feedback */
+.result-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.result-message.success {
+  background: rgba(232, 180, 184, 0.2);
+  border: 1px solid var(--primary-rose);
+  color: var(--primary-rose);
+}
+
+.result-message.error {
+  background: rgba(244, 194, 194, 0.2);
+  border: 1px solid var(--secondary-rose);
+  color: var(--secondary-rose);
+}
+
+.sequence-feedback {
+  color: var(--accent-gold);
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.hint-box {
+  background: rgba(212, 165, 116, 0.1);
+  border: 1px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 15px 0;
+  color: var(--accent-gold);
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Estilos para LevelWrapper */
+.level-wrapper {
+  width: 100%;
+}
+
+.level-header {
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.1) 0%, rgba(244, 194, 194, 0.1) 100%);
+  border-bottom: 1px solid var(--primary-rose);
+  text-align: center;
+}
+
+.level-header .game-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--primary-rose);
+  text-shadow: 0 0 10px rgba(232, 180, 184, 0.5);
+  animation: romantic-pulse 3s infinite;
+}
+
+.level-progress {
+  font-size: 1.1em;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+}
+
+.level-title {
+  font-size: 1.8em;
+  color: var(--primary-rose);
+  margin-bottom: 10px;
+}
+
+.level-content {
+  padding: 40px;
+  min-height: 500px;
+  transition: opacity 0.5s ease;
+}
+
+.level-content.transitioning {
+  opacity: 0;
+}
+
+.challenge-section {
+  width: 100%;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  font-size: 1.2em;
+  color: var(--accent-gold);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.challenge-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Asegurar que los desafíos sean visibles */
+.emotional-challenge,
+.riddle-challenge,
+.cipher-challenge,
+.error-detection-challenge,
+.choice-challenge,
+.hidden-message-challenge,
+.interactive-challenge,
+.image-challenge {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .quiz-header h2 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #00ff41;
+  color: var(--primary-rose);
 }
 
 .quiz-progress {
   font-size: 1.1em;
   margin-bottom: 30px;
-  color: #00cc33;
+  color: var(--accent-gold);
 }
 
 .question-text {
   font-size: 1.3em;
   margin-bottom: 30px;
-  color: #00ff41;
+  color: var(--primary-rose);
 }
 
 .options-grid {
@@ -255,10 +785,10 @@ body {
 
 .option-btn {
   padding: 15px;
-  background: rgba(0, 255, 65, 0.1);
-  border: 2px solid #00ff41;
-  border-radius: 8px;
-  color: #00ff41;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  color: var(--primary-rose);
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -266,15 +796,15 @@ body {
 }
 
 .option-btn:hover:not(:disabled) {
-  background: rgba(0, 255, 65, 0.2);
+  background: rgba(232, 180, 184, 0.2);
   transform: translateY(-2px);
 }
 
 .option-btn.wrong {
-  background: rgba(255, 0, 0, 0.2);
-  border-color: #ff0041;
-  color: #ff0041;
-  animation: shake 0.5s;
+  background: rgba(244, 194, 194, 0.2);
+  border-color: var(--secondary-rose);
+  color: var(--secondary-rose);
+  animation: romantic-shake 0.6s;
 }
 
 .final-level {
@@ -286,30 +816,31 @@ body {
 .congratulations {
   font-size: 2.5em;
   margin-bottom: 30px;
-  background: linear-gradient(45deg, #00ff41, #ff00ff);
+  background: linear-gradient(45deg, var(--primary-rose), var(--accent-gold), var(--deep-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: rainbow 3s infinite;
+  animation: romantic-rainbow 4s infinite;
 }
 
-@keyframes rainbow {
+@keyframes romantic-rainbow {
   0%, 100% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
+  50% { filter: hue-rotate(20deg); }
 }
 
 .love-message {
-  background: rgba(255, 0, 255, 0.1);
-  border: 2px solid #ff00ff;
-  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
+  border: 2px solid var(--primary-rose);
+  border-radius: 20px;
   padding: 30px;
   margin-bottom: 40px;
+  box-shadow: 0 0 30px rgba(232, 180, 184, 0.2);
 }
 
 .love-message h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
-  color: #ff00ff;
+  color: var(--primary-rose);
 }
 
 .main-message,
@@ -318,13 +849,13 @@ body {
   font-size: 1.1em;
   margin-bottom: 15px;
   line-height: 1.8;
-  color: #00cc33;
+  color: var(--accent-gold);
 }
 
 .signature {
   font-size: 1.2em;
   font-style: italic;
-  color: #ff00ff;
+  color: var(--deep-purple);
   margin-top: 20px;
 }
 
@@ -335,7 +866,7 @@ body {
 .video-gallery h3 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #00ff41;
+  color: var(--primary-rose);
 }
 
 .video-grid {
@@ -346,10 +877,16 @@ body {
 }
 
 .video-item {
-  background: rgba(0, 255, 65, 0.05);
-  border: 1px solid #00ff41;
-  border-radius: 10px;
+  background: rgba(232, 180, 184, 0.05);
+  border: 1px solid var(--primary-rose);
+  border-radius: 15px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(232, 180, 184, 0.3);
 }
 
 .video-frame {
@@ -359,33 +896,35 @@ body {
 }
 
 .video-title {
-  padding: 10px;
+  padding: 15px;
   margin: 0;
   font-size: 0.9em;
-  color: #00cc33;
+  color: var(--accent-gold);
+  text-align: center;
 }
 
 .restart-btn {
-  background: linear-gradient(135deg, #ff00ff, #ff0080);
+  background: linear-gradient(135deg, var(--primary-rose), var(--secondary-rose));
   border: none;
-  border-radius: 8px;
-  color: white;
+  border-radius: 12px;
+  color: var(--bg-dark);
   padding: 15px 30px;
   font-size: 1.1em;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(232, 180, 184, 0.3);
 }
 
 .restart-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(255, 0, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 180, 184, 0.5);
 }
 
 .final-note {
   font-size: 1em;
-  color: #00cc33;
+  color: var(--accent-gold);
   font-style: italic;
 }
 

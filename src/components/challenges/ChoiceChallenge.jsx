@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
 
-const ChoiceLevel = ({ onComplete, partnerName }) => {
+const ChoiceChallenge = ({ onComplete, partnerName }) => {
   const [selectedChoice, setSelectedChoice] = useState(null)
   const [showResult, setShowResult] = useState(false)
 
   const choices = [
     {
       id: 'logic',
-      title: 'A) Seguir la Lógica',
-      description: 'Analizar los patrones y encontrar la solución racional',
+      title: '🧠 Seguir la Lógica',
+      description: 'Analizar patrones y encontrar la solución racional',
       isCorrect: false,
-      message: '🤔 La lógica es buena, pero a veces el corazón sabe más...'
+      message: '🤔 La lógica es útil, pero a veces el corazón sabe más...'
     },
     {
       id: 'heart',
-      title: 'B) Seguir el Corazón',
+      title: '❤️ Seguir el Corazón',
       description: 'Confiar en el instinto y lo que sentimos',
       isCorrect: true,
-      message: '❤️ ¡Correcto! El corazón nunca miente...'
+      message: '💖 ¡Correcto! El corazón nunca miente...'
     }
   ]
 
@@ -36,14 +36,14 @@ const ChoiceLevel = ({ onComplete, partnerName }) => {
   }
 
   return (
-    <div className="choice-level">
-      <div className="level-header">
-        <h2>🎭 El Momento de la Verdad</h2>
+    <div className="choice-challenge">
+      <div className="challenge-header">
+        <h3>🎭 El Momento de la Verdad</h3>
         <p>{partnerName}, llega el momento de elegir tu camino...</p>
       </div>
 
       <div className="choice-container">
-        <h3>¿Cómo resolverás este enigma?</h3>
+        <h4>¿Cómo resolverás este enigma?</h4>
         
         <div className="choices-grid">
           {choices.map((choice) => (
@@ -53,7 +53,7 @@ const ChoiceLevel = ({ onComplete, partnerName }) => {
               className={`choice-btn ${selectedChoice?.id === choice.id ? 'selected' : ''}`}
               disabled={showResult}
             >
-              <h4>{choice.title}</h4>
+              <h5>{choice.title}</h5>
               <p>{choice.description}</p>
             </button>
           ))}
@@ -68,17 +68,8 @@ const ChoiceLevel = ({ onComplete, partnerName }) => {
           </div>
         )}
       </div>
-
-      <div className="physical-hint">
-        <h3>🎁 Si eliges bien...</h3>
-        <p>Dirígete al lugar más dulce de la casa. Allí encontrarás:</p>
-        <ul>
-          <li>Un postre especial</li>
-          <li>El código final: <strong>2024</strong></li>
-        </ul>
-      </div>
     </div>
   )
 }
 
-export default ChoiceLevel
+export default ChoiceChallenge

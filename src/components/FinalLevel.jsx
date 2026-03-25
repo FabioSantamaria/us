@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import CodeInput from './CodeInput'
 
 const FinalLevel = ({ partnerName, onReset }) => {
-  const [finalCode, setFinalCode] = useState('')
-  const [showError, setShowError] = useState(false)
   const [unlocked, setUnlocked] = useState(false)
   
-  const correctCode = '2024' // Código final del último regalo
+  const correctCode = '7890' // Código del último regalo
   
   const playlistVideos = [
     { id: "dQw4w9WgXcQ", title: "Nuestro Primer Vídeo Juntos" },
@@ -15,109 +14,108 @@ const FinalLevel = ({ partnerName, onReset }) => {
     { id: "kJQP7kiw5Fk", title: "Nuestra Canción" }
   ]
 
-  const handleFinalCode = (e) => {
-    e.preventDefault()
-    if (finalCode === correctCode) {
+  const handleCodeSubmit = (code) => {
+    if (code === correctCode) {
       setUnlocked(true)
-    } else {
-      setShowError(true)
-      setTimeout(() => setShowError(false), 2000)
     }
+    return code === correctCode
   }
 
-  return (
-    <div className="final-level">
-      {!unlocked ? (
+  if (!unlocked) {
+    return (
+      <div className="final-level">
         <div className="final-lock">
           <div className="lock-header">
-            <h2>🔐 El Desafío Final</h2>
+            <h1 className="game-title">System Recovery</h1>
+            <h2>🎉 El Desafío Final</h2>
             <p>{partnerName}, introduce el código final del último regalo...</p>
           </div>
 
-          <form onSubmit={handleFinalCode} className="final-code-form">
-            <input
-              type="text"
-              value={finalCode}
-              onChange={(e) => setFinalCode(e.target.value)}
-              placeholder="Código final de 4 cifras..."
-              className="final-code-input"
-              autoFocus
-            />
-            <button type="submit" className="unlock-btn">
-              🎉 Desbloquear Sorpresa Final
-            </button>
-          </form>
+          <div className="final-instructions">
+            <p>Has llegado al final de la gymkhana.</p>
+            <p>El código final está en el último regalo que encontrarás.</p>
+            <p>¡Introdúcelo para desbloquear la sorpresa final!</p>
+          </div>
 
-          {showError && (
-            <div className="error-message">
-              Código incorrecto. ¿Revisaste bien el último regalo? 🎁
-            </div>
-          )}
+          <div className="code-section">
+            <h3>🔓 Código Final</h3>
+            <CodeInput 
+              expectedCode={correctCode}
+              onSubmit={handleCodeSubmit}
+              placeholder="Código final de 4 dígitos"
+            />
+          </div>
 
           <div className="final-hint">
             <p>💡 Este código estaba junto a tu último regalo...</p>
+            <p>¡Estás a punto de completar la aventura!</p>
           </div>
         </div>
-      ) : (
-        <div className="final-content">
-          <div className="success-message">
-            <h1 className="congratulations">🎉 ¡Gymkhana Completa! 🎉</h1>
-            
-            <div className="love-message">
-              <h2>Para mi querida {partnerName},</h2>
-              <p className="main-message">
-                ¡Has completado todos los desafíos! 
-                Cada prueba fue un pedacito de nuestra historia.
-              </p>
-              <p className="detail-message">
-                Esta gymkhana ha sido un viaje a través de:
-                Las preguntas que nos hicieron conocer,
-                Los errores que nos hicieron reír,
-                Los códigos que solo nosotros entendemos,
-                Los lugares que son nuestro hogar,
-                Y las decisiones que nos trajeron aquí.
-              </p>
-              <p className="closing-message">
-                Esto es más que un juego — es la celebración 
-                de nosotros, de nuestro amor, y de todo lo que viene.
-              </p>
-              <p className="signature">
-                Con todo mi amor, siempre y para siempre ❤️
-              </p>
-            </div>
-          </div>
+      </div>
+    )
+  }
 
-          <div className="video-gallery">
-            <h3>🎬 Nuestra Playlist Privada</h3>
-            <p className="playlist-intro">Estos vídeos son pequeños tesoros de nuestra historia...</p>
-            <div className="video-grid">
-              {playlistVideos.map((video, index) => (
-                <div key={index} className="video-item">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="video-frame"
-                  />
-                  <p className="video-title">{video.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+  return (
+    <div className="final-level unlocked">
+      <div className="final-content">
+        <div className="success-header">
+          <h1 className="game-title">System Recovery</h1>
+          <h1 className="congratulations">🎉 ¡Gymkhana Completa! 🎉</h1>
+        </div>
+        
+        <div className="love-message">
+          <h2>Para mi querida {partnerName},</h2>
+          <p className="main-message">
+            ¡Has completado todos los desafíos! 
+            Cada prueba fue un pedacito de nuestra historia.
+          </p>
+          <p className="detail-message">
+            Esta gymkhana ha sido un viaje a través de:
+            Las preguntas que nos hicieron conocer,
+            Los errores que nos hicieron reír,
+            Los códigos que solo nosotros entendemos,
+            Los lugares que son nuestro hogar,
+            Y las decisiones que nos trajeron aquí.
+          </p>
+          <p className="closing-message">
+            Esto es más que un juego — es la celebración 
+            de nosotros, de nuestro amor, y de todo lo que viene.
+          </p>
+          <p className="signature">
+            Con todo mi amor, siempre y para siempre ❤️
+          </p>
+        </div>
 
-          <div className="final-actions">
-            <button onClick={onReset} className="restart-btn">
-              🔄 Vivir la Aventura Otra Vez
-            </button>
-            <p className="final-note">
-              Gracias por ser mi mayor aventura, {partnerName}. 
-              Esto es solo el comienzo de nuestra historia.
-            </p>
+        <div className="video-gallery">
+          <h3>🎬 Nuestra Playlist Privada</h3>
+          <p className="playlist-intro">Estos vídeos son pequeños tesoros de nuestra historia...</p>
+          <div className="video-grid">
+            {playlistVideos.map((video, index) => (
+              <div key={index} className="video-item">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="video-frame"
+                />
+                <p className="video-title">{video.title}</p>
+              </div>
+            ))}
           </div>
         </div>
-      )}
+
+        <div className="final-actions">
+          <button onClick={onReset} className="restart-btn">
+            🔄 Vivir la Aventura Otra Vez
+          </button>
+          <p className="final-note">
+            Gracias por ser mi mayor aventura, {partnerName}. 
+            Esto es solo el comienzo de nuestra historia.
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
