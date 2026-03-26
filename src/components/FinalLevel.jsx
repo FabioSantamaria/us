@@ -1,61 +1,14 @@
-import React, { useState } from 'react'
-import CodeInput from './CodeInput'
+import React from 'react'
 
 const FinalLevel = ({ partnerName, onReset }) => {
-  const [unlocked, setUnlocked] = useState(false)
-  
-  const correctCode = '9753' // Código del último regalo
-  
   const playlistVideos = [
     { id: "dQw4w9WgXcQ", title: "Nuestro Primer Vídeo Juntos" },
     { id: "jNQXAC9IVRw", title: "El Día que Conocimos" },
     { id: "9bZkp7q19f0", title: "Aventuras Inolvidables" },
     { id: "hT_nvWreIhg", title: "Momentos Especiales" },
-    { id: "kJQP7kiw5Fk", title: "Nuestra Canción" }
+    { id: "kJQP7kiw5Fk", title: "Nuestra Canción" },
+    { id: "UKIkztscIxQ", title: "Para Siempre!!" }
   ]
-
-  const handleCodeSubmit = (code) => {
-    if (code === correctCode) {
-      setUnlocked(true)
-    }
-    return code === correctCode
-  }
-
-  if (!unlocked) {
-    return (
-      <div className="final-level">
-        <div className="final-lock">
-          <div className="lock-header">
-            <h1 className="game-title">System Recovery</h1>
-            <h2>🔧 System Recovery Complete</h2>
-            <p>Recuperando último fragmento del sistema...</p>
-            <p>Validando código final...</p>
-          </div>
-
-          <div className="final-instructions">
-            <p>El sistema está casi completamente restaurado.</p>
-            <p>Introduce el código final del último fragmento para completar la recuperación.</p>
-            <p>🎁 Este código estaba junto a tu último regalo...</p>
-            <p>¡Estás a punto de completar la recuperación del sistema!</p>
-          </div>
-
-          <div className="code-section">
-            <h3>🔓 Código Final del Sistema</h3>
-            <CodeInput 
-              expectedCode={correctCode}
-              onSubmit={handleCodeSubmit}
-              placeholder="Código final de 4 dígitos"
-            />
-          </div>
-
-          <div className="final-hint">
-            <p>💡 Busca en el lugar más alto de casa...</p>
-            <p>Donde el sol se pone primero.</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <div className="final-level unlocked">

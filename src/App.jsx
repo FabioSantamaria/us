@@ -13,6 +13,7 @@ import ChoiceChallenge from './components/challenges/ChoiceChallenge'
 import HiddenMessageChallenge from './components/challenges/HiddenMessageChallenge'
 import InteractiveChallenge from './components/challenges/InteractiveChallenge'
 import ImageChallenge from './components/challenges/ImageChallenge'
+import AnniversaryChallenge from './components/challenges/AnniversaryChallenge'
 
 const LEVELS = [
   {
@@ -73,11 +74,19 @@ const LEVELS = [
   },
   {
     id: 'level8',
-    title: 'System Recovery Complete',
-    intro: 'Recuperando último fragmento del sistema...\nValidando código final...',
+    title: 'Final Approach',
+    intro: 'Accediendo al protocolo final...\nEl sistema está listo para el último paso...\n\nAndrea, estamos a punto de completar la recuperación.\nSolo queda un último desafío antes de la celebración.',
     clue: '🎁 En el lugar más alto de casa, donde el sol se pone primero.',
     expectedCode: '9753',
     challenge: ImageChallenge
+  },
+  {
+    id: 'level9',
+    title: 'Ninth Anniversary Protocol',
+    intro: '🎉 ¡9 años juntos! El sistema detecta una anomalía especial...\nNuestro amor ha superado todas las pruebas y ahora...\nestá listo para el siguiente nivel.\n\nPara celebrar nuestro noveno aniversario,\nhay un último código especial: el número de años que nos amamos.',
+    clue: '🎂 El número más mágico de todos... ¡nuestros 9 años juntos! ❤️',
+    expectedCode: '0009',
+    challenge: AnniversaryChallenge
   },
   {
     id: 'final',

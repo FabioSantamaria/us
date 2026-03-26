@@ -609,6 +609,197 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Estilos para Anniversary Challenge */
+.anniversary-challenge {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.anniversary-container {
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.3), rgba(212, 165, 116, 0.3));
+  border: 3px solid var(--accent-gold);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(212, 165, 116, 0.4);
+}
+
+.anniversary-message h4 {
+  color: var(--accent-gold);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(212, 165, 116, 0.6);
+}
+
+.anniversary-text {
+  font-size: 1.1em;
+  color: var(--primary-rose);
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.anniversary-highlight {
+  font-size: 1.4em;
+  color: var(--accent-gold);
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(212, 165, 116, 0.2);
+  border-radius: 15px;
+  border: 2px solid var(--accent-gold);
+  animation: anniversary-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes anniversary-glow {
+  0% { 
+    box-shadow: 0 0 10px rgba(212, 165, 116, 0.4);
+    transform: scale(1);
+  }
+  100% { 
+    box-shadow: 0 0 20px rgba(212, 165, 116, 0.8);
+    transform: scale(1.02);
+  }
+}
+
+.anniversary-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(107, 91, 149, 0.2);
+  border: 2px solid var(--deep-purple);
+  border-radius: 15px;
+  min-width: 150px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(107, 91, 149, 0.4);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--deep-purple);
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1em;
+  color: var(--primary-rose);
+  font-weight: 600;
+}
+
+.anniversary-code {
+  background: rgba(26, 26, 46, 0.8);
+  border: 2px solid var(--accent-gold);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.anniversary-code h5 {
+  color: var(--accent-gold);
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.code-display {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.code-digit {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--primary-rose), var(--secondary-rose));
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(232, 180, 184, 0.4);
+  animation: digit-pulse 1.5s ease-in-out infinite;
+}
+
+.code-digit:nth-child(4) {
+  animation-delay: 0.3s;
+  background: linear-gradient(135deg, var(--accent-gold), var(--deep-purple));
+}
+
+@keyframes digit-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.code-meaning {
+  color: var(--primary-rose);
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+.anniversary-btn {
+  background: linear-gradient(135deg, var(--accent-gold), var(--deep-purple));
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+}
+
+.anniversary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.6);
+}
+
+.anniversary-success {
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.3), rgba(107, 91, 149, 0.3));
+  border: 3px solid var(--accent-gold);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  animation: success-celebration 2s ease;
+}
+
+@keyframes success-celebration {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% { 
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.anniversary-success p {
+  color: var(--accent-gold);
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
 /* Estilos para Image Challenge */
 .image-placeholder {
   margin: 20px 0;

@@ -60,17 +60,23 @@ Cada nivel tiene:
 - **Lugar del regalo**: Donde pedalear sin avanzar también cuenta
 - **Código**: 8642
 
-### Nivel 8: System Recovery Complete
-- **Tipo**: Identificar lugar en imagen
+### Nivel 8: Final Approach
+- **Tipo**: Identificar lugar en imagen (penúltimo desafío)
 - **Respuesta**: VENTANA
 - **Lugar del regalo**: En el lugar más alto de casa, donde el sol se pone primero
-- **Código**: 9753
+- **Código**: 9753 (te lleva directamente al aniversario)
+
+### Nivel 9: Ninth Anniversary Protocol (ESPECIAL ANIVERSARIO)
+- **Tipo**: Celebración especial del noveno aniversario
+- **Mensaje**: ¡9 años juntos! Celebrando nuestro amor incondicional
+- **Lugar del regalo**: 🎂 El número más mágico de todos... ¡nuestros 9 años juntos! ❤️
+- **Código**: 0009 (CÓDIGO ESPECIAL DE ANIVERSARIO - DESBLOQUEA PLAYLIST)
 
 ### Nivel Final: System Recovery Complete
-- **Código final**: 9753 (del último regalo)
-- **Recompensa**: Playlist privada de YouTube
+- **Recompensa**: Playlist privada de YouTube con mensaje de aniversario
+- **Sin código adicional**: El 0009 del aniversario desbloquea directamente la celebración
 
-## 📝 Tabla Resumen (Actualizado)
+## 📝 Tabla Resumen (Actualizada con Aniversario)
 
 | Nivel | Tipo | Respuesta | Lugar | Código |
 |-------|--------|-----------|-------|---------|
@@ -82,7 +88,8 @@ Cada nivel tiene:
 | 6 | Anomalía | CONGELADOR | Lugar frío | 1357 |
 | 7 | Interactivo | Secuencia 2-4-1-3 | Donde pedalear sin avanzar | 8642 |
 | 8 | Visual | VENTANA | Lugar más alto | 9753 |
-| Final | Código 9753 | - | Playlist | - |
+| 9 | Aniversario | Celebración | 9 años juntos | 0009 |
+| Final | Playlist | - | Sin código | - |
 
 ## 🎁 Sugerencias de Regalos (pequeños y económicos)
 
@@ -94,6 +101,15 @@ Cada nivel tiene:
 - **Nivel 6 (Baño)**: Jabón artesanal, sales de baño, aceites
 - **Nivel 7 (Entrada)**: Llavero, adorno para puerta, planta pequeña
 - **Nivel 8 (Terraza)**: Linterna, planta, decoración exterior
+- **Nivel 9 (Aniversario)**: Pastel pequeño, tarjeta especial, regalo simbólico
+
+## 🎉 Preparación Especial del Noveno Aniversario
+
+Para el nivel 9 especial:
+1. **Regalo especial**: Algo que represente los 9 años juntos
+2. **Código 0009**: Escríbelo en un papel con diseño de aniversario
+3. **Mensaje personal**: Añade una nota especial sobre vuestro amor
+4. **Decoración extra**: Haz que este nivel se sienta único y especial
 
 ## 🏠 Adaptación de Lugares
 
@@ -110,13 +126,14 @@ Si no tienes alguno de estos lugares, puedes adaptar:
 
 ## 🎯 Preparación Paso a Paso
 
-1. **Prepara 8 regalos pequeños** (uno por nivel)
+1. **Prepara 9 regalos pequeños** (uno por nivel) + 1 especial de aniversario
 2. **Escribe los códigos** en papeles pequeños:
-   - 1234, 5678, 9012, 3456, 2468, 1357, 8642, 9753
+   - 1234, 5678, 9012, 3456, 2468, 1357, 8642, 9753, 0009
 3. **Coloca cada regalo** con su código correspondiente
-4. **Prepara la playlist** de YouTube para el final
-5. **Ajusta las preguntas** si es necesario
-6. **Haz una prueba rápida** para verificar flujo
+4. **Prepara la playlist** de YouTube para el final con mensaje de aniversario
+5. **Añade decoración especial** para el nivel 9
+6. **Ajusta las preguntas** si es necesario
+7. **Haz una prueba rápida** para verificar flujo
 
 ## 🚀 Características Técnicas
 
@@ -163,4 +180,4 @@ Para personalizar el juego:
 - **Ten flexibilidad**: Si algo no funciona, improvisa
 - **Disfruta el proceso**: La preparación también es parte del regalo
 
-¡Este escape room System Recovery es modular, fácil de personalizar y muy divertido de preparar! 💕🔧
+¡Este escape room System Recovery con celebración del noveno aniversario es modular, fácil de personalizar y muy divertido de preparar! 💕🎂🔧
