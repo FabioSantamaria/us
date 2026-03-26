@@ -20,18 +20,18 @@ const CipherChallenge = ({ onComplete, partnerName }) => {
   return (
     <div className="cipher-challenge">
       <div className="challenge-header">
-        <h3>🔐 Puzzle Cifrado</h3>
-        <p>{partnerName}, descifra este mensaje secreto...</p>
+        <h3>🔐 Logic Decryption</h3>
+        <p>Procesando secuencias cifradas del sistema...</p>
       </div>
 
       <div className="cipher-container">
         <div className="cipher-info">
-          <h4>Sistema de Cifrado:</h4>
+          <h4>Protocolo de Descifrado:</h4>
           <p>A=1, B=2, C=3, ..., Z=26</p>
         </div>
 
         <div className="cipher-text">
-          <h4>Mensaje Cifrado:</h4>
+          <h4>Secuencia Cifrada:</h4>
           <div className="encrypted-message">{cipherText}</div>
         </div>
 
@@ -48,13 +48,13 @@ const CipherChallenge = ({ onComplete, partnerName }) => {
           </div>
 
           <button type="submit" className="submit-challenge-btn">
-            Descifrar Mensaje
+            Interpretar Código
           </button>
         </form>
 
         {showError && (
           <div className="error-message">
-            Respuesta incorrecta. Revisa tu descifrado...
+            Secuencia incorrecta. Revisa el protocolo de descifrado...
           </div>
         )}
 

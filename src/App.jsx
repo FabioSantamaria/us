@@ -17,71 +17,71 @@ import ImageChallenge from './components/challenges/ImageChallenge'
 const LEVELS = [
   {
     id: 'level1',
-    title: 'Desafío Emocional',
-    intro: 'Este primer desafío pondrá a prueba tu conexión especial. Responde desde el corazón.',
-    clue: '🎁 Busca donde guardamos nuestros primeros recuerdos juntos. Allí encontrarás un regalo especial con un código de 4 dígitos.',
+    title: 'Memory Initialization',
+    intro: 'Iniciando recuperación del sistema...\nDetectando recuerdos esenciales...\n\nAndrea, para restaurar el sistema, necesitamos acceder a un momento clave.',
+    clue: '🎁 Busca en el sitio donde guardamos cosas que casi nunca usamos, pero nunca tiraríamos.',
     expectedCode: '1234',
     challenge: EmotionalChallenge
   },
   {
     id: 'level2',
-    title: 'Adivinanza Misteriosa',
-    intro: 'Demuestra tu ingenio con esta adivinanza clásica. Piensa lateralmente.',
-    clue: '🎁 Dirígete a donde guardamos el café. En la estantería encontrarás una caja con sorpresas y tu siguiente código.',
+    title: 'Archive Access',
+    intro: 'Accediendo a archivos secundarios...\nAlgunas respuestas no están en la memoria, sino en lo que aún no ha sido escrito.',
+    clue: '🎁 Hoy no vamos a cocinar… pero aun así tendrás que abrirlo.',
     expectedCode: '5678',
     challenge: RiddleChallenge
   },
   {
     id: 'level3',
-    title: 'Puzzle Cifrado',
-    intro: 'El sistema ha cifrado un mensaje importante. Descifra para continuar.',
-    clue: '🎁 Ve a la cocina y busca junto a los utensilios de cocina. Allí te espera un regalo con el código siguiente.',
+    title: 'Logic Decryption',
+    intro: 'Activando módulo lógico...\nProcesando secuencias cifradas...',
+    clue: '🎁 A veces lo más interesante no está en la pantalla, sino justo detrás.',
     expectedCode: '9012',
     challenge: CipherChallenge
   },
   {
     id: 'level4',
-    title: 'Detección de Error',
-    intro: 'El sistema ha detectado un error crítico. Encuentra y corrige el problema.',
-    clue: '🎁 En el salón, detrás del sofá, encontrarás un regalo especial con tu código.',
+    title: 'System Correction',
+    intro: 'Detectando anomalía en el sistema...\nCorrigiendo datos incorrectos...',
+    clue: '🎁 Antes de salir de casa, siempre pasamos por aquí.',
     expectedCode: '3456',
     challenge: ErrorDetectionChallenge
   },
   {
     id: 'level5',
-    title: 'El Momento de la Verdad',
-    intro: 'Llega el momento de elegir. ¿Seguirás la lógica o el corazón?',
-    clue: '🎁 En el dormitorio, sobre la mesita de noche, te espera un regalo con el código.',
+    title: 'Emotional Override',
+    intro: 'Sistema en conflicto...\nLógica vs emoción...\nSelecciona el camino correcto.',
+    clue: '🎁 Aquí es donde todo termina… y también donde todo empieza al día siguiente.',
     expectedCode: '2468',
     challenge: ChoiceChallenge
   },
   {
     id: 'level6',
-    title: 'Mensaje Oculto',
-    intro: 'No todo es lo que parece. Hay un mensaje oculto en este texto.',
-    clue: '🎁 En el baño, dentro del armario, encontrarás un regalo con el código siguiente.',
+    title: 'Thermal Anomaly',
+    intro: 'Detectando variación térmica...\nAlgunos elementos clave se conservan fuera de condiciones normales.',
+    clue: '🎁 No todo lo importante está caliente… de hecho, esto está bastante frío.',
     expectedCode: '1357',
     challenge: HiddenMessageChallenge
   },
   {
     id: 'level7',
-    title: 'Reto Interactivo',
-    intro: 'Prueba tu memoria y reflejos en este desafío contrarreloj.',
-    clue: '🎁 En la entrada de casa, junto a las llaves, te espera un regalo especial.',
+    title: 'External Environment',
+    intro: 'Accediendo a entorno externo...\nCondiciones variables detectadas...',
+    clue: '🎁 Donde pedalear sin avanzar también cuenta.',
     expectedCode: '8642',
     challenge: InteractiveChallenge
   },
   {
     id: 'level8',
-    title: 'Reconocimiento Visual',
-    intro: 'Observa con atención esta imagen. Los detalles son importantes.',
-    clue: '🎁 En la terraza o balcón, encontrarás un regalo con el código final.',
+    title: 'System Recovery Complete',
+    intro: 'Recuperando último fragmento del sistema...\nValidando código final...',
+    clue: '🎁 En el lugar más alto de casa, donde el sol se pone primero.',
     expectedCode: '9753',
     challenge: ImageChallenge
   },
   {
     id: 'final',
-    title: 'Gran Final'
+    title: 'System Recovery Complete'
   }
 ]
 

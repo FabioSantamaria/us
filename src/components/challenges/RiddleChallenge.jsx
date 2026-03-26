@@ -9,9 +9,7 @@ const RiddleChallenge = ({ onComplete, partnerName }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('RiddleChallenge submitted:', answer)
     if (answer.toUpperCase() === correctAnswer) {
-      console.log('RiddleChallenge correct answer, calling onComplete')
       onComplete()
     } else {
       setShowError(true)
@@ -19,13 +17,11 @@ const RiddleChallenge = ({ onComplete, partnerName }) => {
     }
   }
 
-  console.log('RiddleChallenge render')
-
   return (
     <div className="riddle-challenge">
       <div className="challenge-header">
-        <h3>🧩 Adivinanza</h3>
-        <p>{partnerName}, demuestra tu ingenio...</p>
+        <h3>🧩 Archive Access</h3>
+        <p>Descifrando metáforas del sistema...</p>
       </div>
 
       <div className="riddle-container">
@@ -39,25 +35,25 @@ const RiddleChallenge = ({ onComplete, partnerName }) => {
               type="text"
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
-              placeholder="Tu respuesta..."
+              placeholder="Respuesta del archivo..."
               className="riddle-input"
               autoFocus
             />
           </div>
 
           <button type="submit" className="submit-challenge-btn">
-            Resolver Adivinanza
+            Descifrar Archivo
           </button>
         </form>
 
         {showError && (
           <div className="error-message">
-            Respuesta incorrecta. Piensa en algo que exploras...
+            Archivo corrupto. Intenta otra decodificación...
           </div>
         )}
 
         <div className="hint-box">
-          <p>💡 Pista: Es algo que usas para orientarte...</p>
+          <p>💡 Pista: Piensa en navegación y orientación...</p>
         </div>
       </div>
     </div>

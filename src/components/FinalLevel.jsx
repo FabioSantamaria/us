@@ -4,7 +4,7 @@ import CodeInput from './CodeInput'
 const FinalLevel = ({ partnerName, onReset }) => {
   const [unlocked, setUnlocked] = useState(false)
   
-  const correctCode = '7890' // Código del último regalo
+  const correctCode = '9753' // Código del último regalo
   
   const playlistVideos = [
     { id: "dQw4w9WgXcQ", title: "Nuestro Primer Vídeo Juntos" },
@@ -27,18 +27,20 @@ const FinalLevel = ({ partnerName, onReset }) => {
         <div className="final-lock">
           <div className="lock-header">
             <h1 className="game-title">System Recovery</h1>
-            <h2>🎉 El Desafío Final</h2>
-            <p>{partnerName}, introduce el código final del último regalo...</p>
+            <h2>🔧 System Recovery Complete</h2>
+            <p>Recuperando último fragmento del sistema...</p>
+            <p>Validando código final...</p>
           </div>
 
           <div className="final-instructions">
-            <p>Has llegado al final de la gymkhana.</p>
-            <p>El código final está en el último regalo que encontrarás.</p>
-            <p>¡Introdúcelo para desbloquear la sorpresa final!</p>
+            <p>El sistema está casi completamente restaurado.</p>
+            <p>Introduce el código final del último fragmento para completar la recuperación.</p>
+            <p>🎁 Este código estaba junto a tu último regalo...</p>
+            <p>¡Estás a punto de completar la recuperación del sistema!</p>
           </div>
 
           <div className="code-section">
-            <h3>🔓 Código Final</h3>
+            <h3>🔓 Código Final del Sistema</h3>
             <CodeInput 
               expectedCode={correctCode}
               onSubmit={handleCodeSubmit}
@@ -47,8 +49,8 @@ const FinalLevel = ({ partnerName, onReset }) => {
           </div>
 
           <div className="final-hint">
-            <p>💡 Este código estaba junto a tu último regalo...</p>
-            <p>¡Estás a punto de completar la aventura!</p>
+            <p>💡 Busca en el lugar más alto de casa...</p>
+            <p>Donde el sol se pone primero.</p>
           </div>
         </div>
       </div>
@@ -60,35 +62,38 @@ const FinalLevel = ({ partnerName, onReset }) => {
       <div className="final-content">
         <div className="success-header">
           <h1 className="game-title">System Recovery</h1>
-          <h1 className="congratulations">🎉 ¡Gymkhana Completa! 🎉</h1>
+          <h1 className="congratulations">✅ Sistema Completamente Restaurado</h1>
+          <p className="system-status">Todos los módulos están en su lugar.</p>
+          <p className="system-status">Todos los recuerdos, también.</p>
         </div>
         
         <div className="love-message">
-          <h2>Para mi querida {partnerName},</h2>
+          <h2>🔧 Pero lo más importante...</h2>
           <p className="main-message">
-            ¡Has completado todos los desafíos! 
-            Cada prueba fue un pedacito de nuestra historia.
+            es que todo esto sigue siendo nuestro.
           </p>
           <p className="detail-message">
-            Esta gymkhana ha sido un viaje a través de:
-            Las preguntas que nos hicieron conocer,
+            Esta recuperación ha sido un viaje a través de:
+            Los archivos que nos hicieron conocer,
             Los errores que nos hicieron reír,
             Los códigos que solo nosotros entendemos,
-            Los lugares que son nuestro hogar,
+            Los lugares que son nuestro sistema operativo,
             Y las decisiones que nos trajeron aquí.
           </p>
           <p className="closing-message">
-            Esto es más que un juego — es la celebración 
+            Esto es más que una recuperación del sistema — es la celebración 
             de nosotros, de nuestro amor, y de todo lo que viene.
           </p>
           <p className="signature">
-            Con todo mi amor, siempre y para siempre ❤️
+            Gracias por recorrer esto conmigo.
+            <br />
+            Feliz cumpleaños ❤️
           </p>
         </div>
 
         <div className="video-gallery">
-          <h3>🎬 Nuestra Playlist Privada</h3>
-          <p className="playlist-intro">Estos vídeos son pequeños tesoros de nuestra historia...</p>
+          <h3>🎬 Último Recurso del Sistema</h3>
+          <p className="playlist-intro">Estos archivos son los tesoros más valiosos de nuestro sistema...</p>
           <div className="video-grid">
             {playlistVideos.map((video, index) => (
               <div key={index} className="video-item">
@@ -108,11 +113,10 @@ const FinalLevel = ({ partnerName, onReset }) => {
 
         <div className="final-actions">
           <button onClick={onReset} className="restart-btn">
-            🔄 Vivir la Aventura Otra Vez
+            🔄 Reiniciar Sistema
           </button>
           <p className="final-note">
-            Gracias por ser mi mayor aventura, {partnerName}. 
-            Esto es solo el comienzo de nuestra historia.
+            Una nueva aventura también te está esperando...
           </p>
         </div>
       </div>

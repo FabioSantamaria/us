@@ -17,7 +17,7 @@ const ChoiceChallenge = ({ onComplete, partnerName }) => {
       title: '❤️ Seguir el Corazón',
       description: 'Confiar en el instinto y lo que sentimos',
       isCorrect: true,
-      message: '💖 ¡Correcto! El corazón nunca miente...'
+      message: '💖 ¡Decisión correcta! Prioridad emocional confirmada...'
     }
   ]
 
@@ -38,12 +38,12 @@ const ChoiceChallenge = ({ onComplete, partnerName }) => {
   return (
     <div className="choice-challenge">
       <div className="challenge-header">
-        <h3>🎭 El Momento de la Verdad</h3>
-        <p>{partnerName}, llega el momento de elegir tu camino...</p>
+        <h3>🎭 Emotional Override</h3>
+        <p>Sistema en conflicto... Lógica vs emoción...</p>
       </div>
 
       <div className="choice-container">
-        <h4>¿Cómo resolverás este enigma?</h4>
+        <h4>Selecciona el protocolo correcto:</h4>
         
         <div className="choices-grid">
           {choices.map((choice) => (
@@ -63,7 +63,7 @@ const ChoiceChallenge = ({ onComplete, partnerName }) => {
           <div className={`result-message ${selectedChoice.isCorrect ? 'success' : 'error'}`}>
             <p>{selectedChoice.message}</p>
             {selectedChoice.isCorrect && (
-              <p className="next-hint">🎁 Busca en nuestra cocina el siguiente regalo...</p>
+              <p className="next-hint">🎁 Sistema sincronizado. Busca en el lugar de descanso...</p>
             )}
           </div>
         )}

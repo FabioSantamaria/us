@@ -26,8 +26,8 @@ const EmotionalChallenge = ({ onComplete, partnerName }) => {
   return (
     <div className="emotional-challenge">
       <div className="challenge-header">
-        <h3>💝 Desafío Emocional</h3>
-        <p>Esta pregunta solo tú y {partnerName} conocen la respuesta...</p>
+        <h3>💝 Memory Initialization</h3>
+        <p>Accediendo a núcleo emocional del sistema...</p>
       </div>
 
       <div className="question-container">
@@ -55,13 +55,13 @@ const EmotionalChallenge = ({ onComplete, partnerName }) => {
             className="submit-challenge-btn"
             disabled={!selectedAnswer}
           >
-            Enviar Respuesta
+            Validar Memoria
           </button>
         </form>
 
         {showError && (
           <div className="error-message">
-            Respuesta incorrecta. Piensa en ese momento especial...
+            Memoria incorrecta. Revisa los archivos emocionales...
           </div>
         )}
       </div>

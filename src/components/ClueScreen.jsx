@@ -14,12 +14,12 @@ const ClueScreen = ({ clue, expectedCode, onCodeSubmit, partnerName }) => {
       <div className="clue-container">
         <div className="clue-header">
           <h2>🎁 ¡Desafío Completado!</h2>
-          <p>¡Excel trabajo, {partnerName}! Has superado el reto digital.</p>
+          <p>¡Excelente trabajo, {partnerName}! Has superado el reto.</p>
         </div>
 
         <div className="clue-content">
           <div className="clue-box">
-            <h3>📍 Pista para tu Búsqueda Física</h3>
+            <h3>📍 Pista para tu Búsqueda</h3>
             <div className="clue-text">
               {clue}
             </div>
