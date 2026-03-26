@@ -1,23 +1,21 @@
 import React, { useState } from 'react'
 
 const HiddenMessageChallenge = ({ onComplete, partnerName }) => {
-  const [answer, setAnswer] = useState('')
+  const [selectedOption, setSelectedOption] = useState('')
   const [showError, setShowError] = useState(false)
 
-  const hiddenText = [
-    "N   O   M   I   R   E   S",
-    "L   A   S   P   R   I   M",
-    "E   R   A   S   L   E   T",
-    "R   A   S   D   E   C   A",
-    "D   A   P   A   L   A   B",
-    "R   A"
+  const options = [
+    "DUCHA CALIENTE",
+    "MANTA", 
+    "RADIADOR",
+    "CONGELADOR"
   ]
 
-  const correctAnswer = "NOS"
+  const correctAnswer = "CONGELADOR"
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (answer.toUpperCase() === correctAnswer) {
+    if (selectedOption === correctAnswer) {
       onComplete()
     } else {
       setShowError(true)
@@ -28,53 +26,52 @@ const HiddenMessageChallenge = ({ onComplete, partnerName }) => {
   return (
     <div className="hidden-message-challenge">
       <div className="challenge-header">
-        <h3>🔍 Mensaje Oculto</h3>
-        <p>{partnerName}, encuentra el mensaje secreto...</p>
+        <h3>🔍 Thermal Anomaly</h3>
+        <p>Detectando variación térmica en los datos del sistema...</p>
       </div>
 
       <div className="hidden-message-container">
         <div className="message-instruction">
-          <h4>Instrucción:</h4>
-          <p>Solo mira las primeras letras de cada línea...</p>
+          <h4>Protocolo de Análisis Térmico:</h4>
+          <p>El sistema ha detectado una anomalía en los elementos térmicos.</p>
+          <p>Cuatro elementos están registrados, pero uno no corresponde a esta categoría.</p>
+          <p><strong>¿Qué elemento no encaja?</strong></p>
         </div>
 
-        <div className="hidden-text">
-          {hiddenText.map((line, index) => (
-            <div key={index} className="text-line">
-              {line.split('').map((char, charIndex) => (
-                <span key={charIndex} className="letter">
-                  {char}
-                </span>
-              ))}
-            </div>
+        <div className="options-container">
+          {options.map((option, index) => (
+            <label key={index} className="thermal-option">
+              <input
+                type="radio"
+                name="thermal-element"
+                value={option}
+                checked={selectedOption === option}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                className="thermal-radio"
+              />
+              <span className="option-text">{option}</span>
+            </label>
           ))}
         </div>
 
         <form onSubmit={handleSubmit} className="answer-form">
-          <div className="input-group">
-            <input
-              type="text"
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
-              placeholder="Mensaje oculto..."
-              className="hidden-input"
-              autoFocus
-            />
-          </div>
-
-          <button type="submit" className="submit-challenge-btn">
-            Revelar Mensaje
+          <button 
+            type="submit" 
+            className="submit-challenge-btn"
+            disabled={!selectedOption}
+          >
+            Analizar Anomalía
           </button>
         </form>
 
         {showError && (
           <div className="error-message">
-            Mensaje incorrecto. Fíjate bien en las primeras letras...
+            Análisis incorrecto. Piensa en las temperaturas...
           </div>
         )}
 
         <div className="hint-box">
-          <p>💡 Pista: Lee verticalmente las primeras letras...</p>
+          <p>💡 Pista: ¿Cuál de estos elementos mantiene las cosas <strong>frías</strong> en lugar de calientes?</p>
         </div>
       </div>
     </div>

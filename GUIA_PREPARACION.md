@@ -1,8 +1,8 @@
-# 🎁 Guía de Preparación - Escape Room Romántico (Nueva Arquitectura)
+# 🎁 Guía de Preparación - Escape Room System Recovery
 
 ## 📋 Resumen de la Estructura
 
-**8 niveles + 1 final** con arquitectura modular clara:
+**8 niveles + 1 final** con narrativa System Recovery:
 - **Puzzle digital** → **Pista física** → **Búsqueda** → **Regalo** → **Código de 4 dígitos**
 
 Cada nivel tiene:
@@ -11,77 +11,78 @@ Cada nivel tiene:
 3. **Regalo**: Pequeño detalle especial
 4. **Código**: 4 dígitos para siguiente nivel
 
-## 🧩 Los 8 Niveles + Final
+## 🧩 Los 8 Niveles + Final (Actualizado)
 
-### Nivel 1: Desafío Emocional
+### Nivel 1: Memory Initialization
 - **Tipo**: Pregunta emocional (opción múltiple)
 - **Pregunta**: "¿Qué momento especial compartimos bajo las estrellas?"
 - **Respuesta correcta**: "Cuando dijiste 'te quiero'"
-- **Lugar del regalo**: Donde guardamos nuestros primeros recuerdos juntos
+- **Lugar del regalo**: Donde guardamos cosas que casi nunca usamos, pero nunca tiraríamos
 - **Código**: 1234
 
-### Nivel 2: Adivinanza Misteriosa
+### Nivel 2: Archive Access
 - **Tipo**: Adivinanza clásica
 - **Pregunta**: "Tengo ciudades pero no casas, montañas pero no árboles..."
 - **Respuesta**: MAPA
-- **Lugar del regalo**: Donde guardamos el café (estantería)
+- **Lugar del regalo**: Hoy no vamos a cocinar… pero aun así tendrás que abrirlo
 - **Código**: 5678
 
-### Nivel 3: Puzzle Cifrado
+### Nivel 3: Logic Decryption
 - **Tipo**: Cifrado A=1
 - **Mensaje cifrado**: "3-15-4-9-7-15"
 - **Respuesta**: CODIGO
-- **Lugar del regalo**: Cocina (junto a utensilios)
+- **Lugar del regalo**: A veces lo más interesante no está en la pantalla, sino justo detrás
 - **Código**: 9012
 
-### Nivel 4: Detección de Error
+### Nivel 4: System Correction
 - **Tipo**: Corrección de error del sistema
-- **Error**: "Andrea odia los gatos"
+- **Error**: "ERROR: 'Andrea odia los gatos'"
 - **Corrección**: AMA
-- **Lugar del regalo**: Salón (detrás del sofá)
+- **Lugar del regalo**: Antes de salir de casa, siempre pasamos por aquí
 - **Código**: 3456
 
-### Nivel 5: El Momento de la Verdad
+### Nivel 5: Emotional Override
 - **Tipo**: Elección entre opciones
 - **Opción correcta**: "Seguir el Corazón"
-- **Lugar del regalo**: Dormitorio (mesita de noche)
+- **Lugar del regalo**: Aquí es donde todo termina… y también donde todo empieza al día siguiente
 - **Código**: 2468
 
-### Nivel 6: Mensaje Oculto
-- **Tipo**: Primeras letras de texto
-- **Mensaje oculto**: "NOS" (de "NO MI...")
-- **Lugar del regalo**: Baño (dentro del armario)
+### Nivel 6: Thermal Anomaly
+- **Tipo**: ¿Qué elemento no encaja? (opción múltiple)
+- **Opciones**: DUCHA CALIENTE, MANTA, RADIADOR, CONGELADOR
+- **Respuesta correcta**: CONGELADOR
+- **Lugar del regalo**: No todo lo importante está caliente… de hecho, esto está bastante frío
 - **Código**: 1357
 
-### Nivel 7: Reto Interactivo
+### Nivel 7: External Environment
 - **Tipo**: Secuencia de memoria contrarreloj
 - **Secuencia**: 2 → 4 → 1 → 3
-- **Lugar del regalo**: Entrada (junto a las llaves)
+- **Lugar del regalo**: Donde pedalear sin avanzar también cuenta
 - **Código**: 8642
 
-### Nivel 8: Reconocimiento Visual
+### Nivel 8: System Recovery Complete
 - **Tipo**: Identificar lugar en imagen
 - **Respuesta**: VENTANA
-- **Lugar del regalo**: Terraza o balcón
+- **Lugar del regalo**: En el lugar más alto de casa, donde el sol se pone primero
 - **Código**: 9753
 
-### Nivel Final: Gran Final
-- **Código final**: 7890 (del último regalo)
+### Nivel Final: System Recovery Complete
+- **Código final**: 9753 (del último regalo)
 - **Recompensa**: Playlist privada de YouTube
 
-## 📝 Tabla Resumen
+## 📝 Tabla Resumen (Actualizado)
 
 | Nivel | Tipo | Respuesta | Lugar | Código |
 |-------|--------|-----------|-------|---------|
-| 1 | Emocional | "Cuando dijiste 'te quiero'" | Primeros recuerdos | 1234 |
-| 2 | Adivinanza | MAPA | Café/Estantería | 5678 |
-| 3 | Cifrado | CODIGO | Cocina | 9012 |
-| 4 | Error | AMA | Salón | 3456 |
-| 5 | Elección | Corazón | Dormitorio | 2468 |
-| 6 | Mensaje oculto | NOS | Baño | 1357 |
-| 7 | Interactivo | Secuencia 2-4-1-3 | Entrada | 8642 |
-| 8 | Visual | VENTANA | Terraza | 9753 |
-| Final | Código 7890 | - | Playlist | - |
+| 1 | Emocional | "Cuando dijiste 'te quiero'" | Cosas que no tiramos | 1234 |
+| 2 | Adivinanza | MAPA | Lugar que abrirás sin cocinar | 5678 |
+| 3 | Cifrado | CODIGO | Detrás de la pantalla | 9012 |
+| 4 | Error | AMA | Paso antes de salir | 3456 |
+| 5 | Elección | Corazón | Donde todo empieza/termina | 2468 |
+| 6 | Anomalía | CONGELADOR | Lugar frío | 1357 |
+| 7 | Interactivo | Secuencia 2-4-1-3 | Donde pedalear sin avanzar | 8642 |
+| 8 | Visual | VENTANA | Lugar más alto | 9753 |
+| Final | Código 9753 | - | Playlist | - |
 
 ## 🎁 Sugerencias de Regalos (pequeños y económicos)
 
@@ -98,14 +99,14 @@ Cada nivel tiene:
 
 Si no tienes alguno de estos lugares, puedes adaptar:
 
-- **Primeros recuerdos** → Caja especial, álbum, armario
-- **Café/Estantería** → Cocina, despensa, salón
-- **Cocina** → Nevera, microondas, despensa
-- **Salón** → Sala de estar, rincón especial
-- **Dormitorio** → Cuarto, mesita, armario
-- **Baño** → Aseo, lavabo, armario
-- **Entrada** → Puerta, recibidor, perchero
-- **Terraza/Balcón** → Ventana, jardín, patio
+- **Cosas que no tiramos** → Caja especial, álbum, armario
+- **Lugar que abrirás sin cocinar** → Cocina, despensa, salón
+- **Detrás de la pantalla** → Escritorio, mueble, estantería
+- **Paso antes de salir** → Recibidor, puerta, perchero
+- **Donde todo empieza/termina** → Cuarto, mesita, armario
+- **Lugar frío** → Nevera, congelador, aseo
+- **Donde pedalear sin avanzar** → Bici, elíptica, cinta
+- **Lugar más alto** → Ventana, balcón, tejado
 
 ## 🎯 Preparación Paso a Paso
 
@@ -119,12 +120,13 @@ Si no tienes alguno de estos lugares, puedes adaptar:
 
 ## 🚀 Características Técnicas
 
-- **Arquitectura modular**: Componentes reutilizables
+- **Arquitectura modular**: Componentes reutilizables con LevelWrapper
 - **Persistencia**: Guarda progreso en localStorage
 - **Validación**: Códigos de 4 dígitos estrictos
-- **Feedback**: Visual claro (✔️/❌)
-- **Transiciones**: Suaves entre niveles
+- **Feedback**: Visual claro (✔️/❌) con animaciones
+- **Transiciones**: Suaves entre niveles con key props
 - **Responsive**: Funciona en móviles y escritorio
+- **Narrativa System Recovery**: Tema tecnológico-emocional consistente
 
 ## 🎥 Playlist YouTube (Nivel Final)
 
@@ -134,6 +136,14 @@ Sustituye los IDs por vídeos reales:
 - Mensajes de amigos/familia
 - Canciones significativas
 - Recuerdos compartidos
+
+## 🎨 Diseño Visual
+
+- **Colores románticos**: Rosa (#e8b4b8), dorado (#d4a574), púrpura (#6b5b95)
+- **Tipografía**: Georgia serif para elegancia
+- **Animaciones**: Brillos, pulsaciones, transiciones suaves
+- **Inputs grandes**: 2em con efectos de brillo
+- **Pistas llamativas**: Con animaciones de barrido y glow
 
 ## 🔧 Personalización Fácil
 
@@ -148,9 +158,9 @@ Para personalizar el juego:
 ## 🚀 Consejos Finales
 
 - **Mantén los desafíos accesibles**: No demasiado difíciles
-- **Enfócate en la experiencia**: Lo importante es el viaje
+- **Enfócate en la experiencia**: Lo importante es el viaje System Recovery
 - **Personaliza los regalos**: Adaptarlos a los gustos de Andrea
 - **Ten flexibilidad**: Si algo no funciona, improvisa
 - **Disfruta el proceso**: La preparación también es parte del regalo
 
-¡Este escape room es modular, fácil de personalizar y muy divertido de preparar! 💕
+¡Este escape room System Recovery es modular, fácil de personalizar y muy divertido de preparar! 💕🔧

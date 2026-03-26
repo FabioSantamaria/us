@@ -4,14 +4,14 @@ const EmotionalChallenge = ({ onComplete, partnerName }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [showError, setShowError] = useState(false)
 
-  const question = "¿Qué momento especial compartimos bajo las estrellas?"
+  const question = "¿Qué momento especial compartimos en el barrio de chueca?"
   const options = [
     "Nuestra primera cita",
     "El día que nos conocimos", 
-    "Cuando dijiste 'te quiero'",
+    "Nuestro primer beso",
     "Nuestra primera aventura"
   ]
-  const correctAnswer = "Cuando dijiste 'te quiero'"
+  const correctAnswer = "Nuestro primer beso"
 
   const handleSubmit = (e) => {
     e.preventDefault()

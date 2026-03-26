@@ -415,25 +415,65 @@ body {
   margin: 10px 0;
 }
 
-/* Estilos para Hidden Message Challenge */
-.hidden-text {
-  font-family: 'Courier New', monospace;
-  margin: 20px 0;
+/* Estilos para Hidden Message Challenge (Thermal Anomaly) */
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 25px 0;
+  background: rgba(26, 26, 46, 0.8);
+  border: 2px solid var(--primary-rose);
+  border-radius: 15px;
+  padding: 20px;
 }
 
-.text-line {
+.thermal-option {
   display: flex;
-  justify-content: center;
-  margin: 5px 0;
+  align-items: center;
+  padding: 15px;
+  background: rgba(232, 180, 184, 0.1);
+  border: 2px solid var(--primary-rose);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.letter {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  text-align: center;
+.thermal-option:hover {
+  background: rgba(232, 180, 184, 0.2);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(232, 180, 184, 0.3);
+}
+
+.thermal-option input[type="radio"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-rose);
+}
+
+.thermal-option .option-text {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--primary-rose);
+  letter-spacing: 0.5px;
+}
+
+.thermal-option:has(input:checked) {
+  background: rgba(212, 165, 116, 0.2);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(212, 165, 116, 0.4);
+}
+
+.thermal-option:has(input:checked) .option-text {
   color: var(--accent-gold);
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.letter:hover {
+  color: var(--primary-rose);
+  transform: scale(1.2);
 }
 
 /* Estilos para Interactive Challenge */
@@ -445,13 +485,28 @@ body {
 .game-instructions h4,
 .game-status h4 {
   color: var(--accent-gold);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.timer {
+.sequence-display {
+  background: rgba(212, 165, 116, 0.2);
+  border: 2px solid var(--accent-gold);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: center;
   font-size: 1.2em;
+  color: var(--accent-gold);
   font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.level-progress {
   color: var(--primary-rose);
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .timer.warning {
@@ -466,42 +521,92 @@ body {
 
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin: 20px 0;
 }
 
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-7 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid-button {
   padding: 20px;
-  background: rgba(232, 180, 184, 0.1);
+  font-size: 1.5em;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.2), rgba(244, 194, 194, 0.2));
   border: 2px solid var(--primary-rose);
   border-radius: 12px;
   color: var(--primary-rose);
-  font-size: 1.2em;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: inherit;
 }
 
 .grid-button:hover:not(:disabled) {
-  background: rgba(232, 180, 184, 0.2);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, rgba(232, 180, 184, 0.4), rgba(244, 194, 194, 0.4));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(232, 180, 184, 0.4);
 }
 
 .grid-button:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .grid-button.clicked {
   background: rgba(212, 165, 116, 0.3);
   border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: scale(0.95);
 }
 
 .grid-button.correct {
-  background: rgba(232, 180, 184, 0.4);
-  border-color: var(--secondary-rose);
-  transform: scale(1.1);
+  background: rgba(107, 91, 149, 0.3);
+  border-color: var(--deep-purple);
+  color: var(--deep-purple);
+  animation: correct-pulse 0.6s ease;
+}
+
+@keyframes correct-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.overall-progress {
+  background: rgba(107, 91, 149, 0.2);
+  border: 1px solid var(--deep-purple);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--deep-purple);
+  font-weight: 600;
+}
+
+.level-complete {
+  background: rgba(212, 165, 116, 0.2);
+  border: 2px solid var(--accent-gold);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: center;
+  color: var(--accent-gold);
+  font-weight: 600;
+  animation: level-complete-glow 1s ease;
+}
+
+@keyframes level-complete-glow {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Estilos para Image Challenge */
