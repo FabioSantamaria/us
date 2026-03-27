@@ -20,9 +20,10 @@ const LEVELS = [
     id: 'level1',
     title: 'Memory Initialization',
     intro: 'Iniciando recuperación del sistema...\nDetectando recuerdos esenciales...\n\nAndrea, para restaurar el sistema, necesitamos acceder a un momento clave.',
-    clue: '🎁 Busca en el sitio donde guardamos cosas que casi nunca usamos, pero nunca tiraríamos.',
+    clue: '🎁 Busca en el sitio donde guardamos recuerdos que nunca tiraríamos.',
     expectedCode: '1234',
     challenge: EmotionalChallenge
+    // estanteria: album de fotos y marcos de fotos
   },
   {
     id: 'level2',
@@ -31,6 +32,7 @@ const LEVELS = [
     clue: '🎁 Hoy no vamos a cocinar… pero aun así tendrás que abrirlo.',
     expectedCode: '5678',
     challenge: RiddleChallenge
+    // horno: cuaderno de pusheen y gafas de eclipse
   },
   {
     id: 'level3',
@@ -39,6 +41,7 @@ const LEVELS = [
     clue: '🎁 A veces lo más interesante no está en la pantalla, sino justo detrás.',
     expectedCode: '9012',
     challenge: CipherChallenge
+    // detrás de la tele: juego de la switch
   },
   {
     id: 'level4',
@@ -47,6 +50,7 @@ const LEVELS = [
     clue: '🎁 Antes de salir de casa, siempre pasamos por aquí.',
     expectedCode: '3456',
     challenge: ErrorDetectionChallenge
+    // en la entrada, debajo de las escaleras: calzador
   },
   {
     id: 'level5',
@@ -55,6 +59,7 @@ const LEVELS = [
     clue: '🎁 Aquí es donde todo termina… y también donde todo empieza al día siguiente.',
     expectedCode: '2468',
     challenge: ChoiceChallenge
+    // habitación, debajo de la cama: pijama y calcetines
   },
   {
     id: 'level6',
@@ -63,6 +68,7 @@ const LEVELS = [
     clue: '🎁 No todo lo importante está caliente… de hecho, esto está bastante frío.',
     expectedCode: '1357',
     challenge: HiddenMessageChallenge
+    // congelador: cut the crap
   },
   {
     id: 'level7',
@@ -71,14 +77,16 @@ const LEVELS = [
     clue: '🎁 Donde pedalear sin avanzar también cuenta.',
     expectedCode: '8642',
     challenge: InteractiveChallenge
+    // galeria: purificador de aire
   },
   {
     id: 'level8',
     title: 'Final Approach',
     intro: 'Accediendo al protocolo final...\nEl sistema está listo para el último paso...\n\nAndrea, estamos a punto de completar la recuperación.\nSolo queda un último desafío antes de la celebración.',
-    clue: '🎁 En el lugar más alto de casa, donde el sol se pone primero.',
+    clue: '🎁 Debajo del espejo hay secretos…\nabre con cuidado',
     expectedCode: '9753',
     challenge: ImageChallenge
+    // mueble del lavabo: cuaderno normal, casa de pájaros
   },
   {
     id: 'level9',

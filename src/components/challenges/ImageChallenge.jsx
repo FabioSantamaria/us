@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import readingImage from '../../assets/images/PXL_20260327_095806458.jpg'
 
 const ImageChallenge = ({ onComplete, partnerName }) => {
   const [answer, setAnswer] = useState('')
@@ -26,26 +27,15 @@ const ImageChallenge = ({ onComplete, partnerName }) => {
       </div>
 
       <div className="image-container">
-        <div className="image-placeholder">
-          {/* En producción, aquí iría una imagen real */}
-          <div className="image-box">
-            <div className="image-icon">🖼️</div>
-            <div className="image-description">
-              <p><strong>Lugar:</strong> {imageDescription}</p>
-              <p><strong>Detalles:</strong></p>
-              <ul>
-                <li>Luz natural entrando por la ventana</li>
-                <li>Libros apilados en una mesita</li>
-                <li>Planta pequeña en la esquina</li>
-                <li>Taza de café recién hecho</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <img 
+          src={readingImage} 
+          alt="Rincón de lectura junto a la ventana"
+          className="challenge-image"
+        />
 
         <div className="question-container">
-          <h4>¿Qué elemento de esta imagen es la clave para encontrar el regalo?</h4>
-          <p className="hint">Piensa en el elemento principal del lugar...</p>
+          <h4>¿Por dónde entra la luz que ilumina este rincón?</h4>
+          <p className="hint">Sin esa luz, la ponse no sería lo mismo...</p>
         </div>
 
         <form onSubmit={handleSubmit} className="answer-form">
@@ -72,7 +62,7 @@ const ImageChallenge = ({ onComplete, partnerName }) => {
         )}
 
         <div className="hint-box">
-          <p>💡 Pista: Es por donde entra la luz del día...</p>
+          <p>💡 Pista: Cada mañana, lo primero que ilumina la habitación pasa por ahí...</p>
         </div>
       </div>
     </div>

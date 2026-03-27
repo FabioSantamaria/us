@@ -6,7 +6,7 @@ const FinalLevel = ({ partnerName, onReset }) => {
     { id: "jNQXAC9IVRw", title: "El Día que Conocimos" },
     { id: "9bZkp7q19f0", title: "Aventuras Inolvidables" },
     { id: "hT_nvWreIhg", title: "Momentos Especiales" },
-    { id: "kJQP7kiw5Fk", title: "Nuestra Canción" },
+    { id: "f8FOKcwaJ40", title: "Sergio" },
     { id: "UKIkztscIxQ", title: "Para Siempre!!" }
   ]
 

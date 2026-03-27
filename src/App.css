@@ -1573,3 +1573,11 @@ body {
 .feedback .message {
   font-weight: 600;
 }
+
+.challenge-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
