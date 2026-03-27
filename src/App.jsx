@@ -83,7 +83,7 @@ const LEVELS = [
     id: 'level8',
     title: 'Final Approach',
     intro: 'Accediendo al protocolo final...\nEl sistema está listo para el último paso...\n\nAndrea, estamos a punto de completar la recuperación.\nSolo queda un último desafío antes de la celebración.',
-    clue: '🎁 Debajo del espejo hay secretos…\nabre con cuidado',
+    clue: '🎁 Debajo del espejo hay secretos…\njusto donde cada noche termina el día.\nAbre con cuidado',
     expectedCode: '9753',
     challenge: ImageChallenge
     // mueble del lavabo: cuaderno normal, casa de pájaros
