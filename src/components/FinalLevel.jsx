@@ -4,6 +4,7 @@ const FinalLevel = ({ partnerName, onReset }) => {
   const playlistVideos = [
     { id: "UKIkztscIxQ", title: "Pata coja" },
     { id: "f8FOKcwaJ40", title: "Sergio y sus cosas" },
+    { id: "IWpsSenQUvk", title: "Saludos de un Arquitecto" },
     { id: "5LFdw4do1h8", title: "Aventuras en el mejor pueblo del mundo!!"},
     { id: "KX1qD7sqC6E", title: "Felicidades a distancia"},
     // add videos from 
