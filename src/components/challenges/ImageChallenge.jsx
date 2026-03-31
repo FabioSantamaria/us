@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import readingImage from '../../assets/images/PXL_20260327_095806458.jpg'
+import readingImage from '../../assets/images/PXL_20260328_094547247.jpg'
 
 const ImageChallenge = ({ onComplete, partnerName }) => {
   const [answer, setAnswer] = useState('')
