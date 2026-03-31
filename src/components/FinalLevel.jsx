@@ -2,13 +2,12 @@ import React from 'react'
 
 const FinalLevel = ({ partnerName, onReset }) => {
   const playlistVideos = [
-    { id: "dQw4w9WgXcQ", title: "Nuestro Primer Vídeo Juntos" },
-    { id: "jNQXAC9IVRw", title: "El Día que Conocimos" },
-    { id: "9bZkp7q19f0", title: "Aventuras Inolvidables" },
-    { id: "hT_nvWreIhg", title: "Momentos Especiales" },
-    { id: "f8FOKcwaJ40", title: "Sergio" },
-    { id: "UKIkztscIxQ", title: "Para Siempre!!" },
-    { id: "5LFdw4do1h8", title: "Aventuras en el mejor pueblo del mundo!!"}
+    { id: "UKIkztscIxQ", title: "Pata coja" },
+    { id: "f8FOKcwaJ40", title: "Sergio y sus cosas" },
+    { id: "5LFdw4do1h8", title: "Aventuras en el mejor pueblo del mundo!!"},
+    { id: "KX1qD7sqC6E", title: "Felicidades a distancia"},
+    // add videos from 
+    { id: "j41S1w1_POY", title: "Pajaritos" },
   ]
 
   return (
