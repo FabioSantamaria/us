@@ -35,8 +35,8 @@ const FinalLevel = ({ partnerName, onReset }) => {
             Y las decisiones que nos trajeron aquí.
           </p>
           <p className="closing-message">
-            Esto es más que una recuperación del sistema — es la celebración 
-            de nosotros, de nuestro amor, y de todo lo que viene.
+            Esto es más que una recuperación del sistema: es la celebración 
+            de nosotros, del amor, y de todo lo que viene.
           </p>
           <p className="signature">
             Gracias por recorrer esto conmigo.

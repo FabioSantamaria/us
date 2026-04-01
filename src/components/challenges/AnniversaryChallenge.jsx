@@ -47,7 +47,7 @@ const AnniversaryChallenge = ({ onComplete, partnerName }) => {
           </div>
           <div className="stat-item">
             <span className="stat-number">❤️</span>
-            <span className="stat-label">Amor Eterno</span>
+            <span className="stat-label">CORAZÓN</span>
           </div>
         </div>
 
