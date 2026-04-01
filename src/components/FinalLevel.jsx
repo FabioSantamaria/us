@@ -28,11 +28,11 @@ const FinalLevel = ({ partnerName, onReset }) => {
           </p>
           <p className="detail-message">
             Esta recuperación ha sido un viaje a través de:
-            Los archivos que nos hicieron conocer,
-            Los errores que nos hicieron reír,
-            Los códigos que solo nosotros entendemos,
-            Los lugares que son nuestro sistema operativo,
-            Y las decisiones que nos trajeron aquí.
+            los archivos que nos hicieron conocer,
+            los errores que nos hicieron reír,
+            los códigos que solo nosotros entendemos,
+            los lugares que son nuestro sistema operativo,
+            y las decisiones que nos trajeron aquí.
           </p>
           <p className="closing-message">
             Esto es más que una recuperación del sistema: es la celebración 
